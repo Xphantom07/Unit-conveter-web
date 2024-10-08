@@ -1,204 +1,205 @@
-<html>
-    <head>
-        <title>Rapid Convert</title>  
-        <link rel="stylesheet" href="style.css"> 
-    </head>
-    <body>
-       <header> <h1>Rapid Convert</h1></header>
-        <div class="unitc">
-            <br>
-            <h2>Unit Converter</h2>
-            <br>
-             <div class="unit">
-                <div class="left">
-            <div class="button" ><h3 id="Lengthbtn" >Length</h3></div>
-            <div class="button" ><h3 id="Areabtn">Area</h3></div>
-            <div class="button" ><h3 id="weightbtn">Weight</h3></div>
-            <div class="button" ><h3 id="Volumebtn">Volume</h3></div>
-            <div class="button" ><h3 id="tempbtn">Temprature</h3></div>
-                </div>
-<!--Box Length -->
-                <div class="right">
-                    <div class="box" id="LengthBox">
-                        <div class="from">
-                            <h4>&nbsp;From</h4><br>
-                            <Input type="text" class="input">
-                            <div class="dropdown">
-                                <ul class="thelist">
-                                    <li>Feet</li>
-                                    <li>Inch</li>
-                                    <li>Millimeter (mm)</li>
-                                    <li>Centimeter (cm)</li>
-                                    <li>Meter (m)</li>
-                                    <li>Kilometer (km)</li>
-                                    <li>Mile</li>
-                                    <li>Yard</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="to">
-                            <h4>&nbsp;&nbsp;&nbsp;&nbsp;To </h4><br>
-                            <Input type="text" class="input">
-                            <div class="dropdown">
-                                <ul class="thelist">
-                                    <li>Feet</li>
-                                    <li>Inch</li>
-                                    <li>Millimeter (mm)</li>
-                                    <li>Centimeter (cm)</li>
-                                    <li>Meter (m)</li>
-                                    <li>Kilometer (km)</li>
-                                    <li>Mile</li>
-                                    <li>Yard</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-<!-- Box - Area  -->
-                    <div class="box" id="AreaBox"><div class="from">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rapid Convert</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Rapid Convert</h1></header>
+    <div class="unitc">
+        <br>
+        <h2>Unit Converter</h2>
+        <br>
+        <div class="unit">
+            <div class="left">
+                <div class="button"><h3 id="Lengthbtn">Length</h3></div>
+                <div class="button"><h3 id="Areabtn">Area</h3></div>
+                <div class="button"><h3 id="weightbtn">Weight</h3></div>
+                <div class="button"><h3 id="Volumebtn">Volume</h3></div>
+                <div class="button"><h3 id="tempbtn">Temperature</h3></div>
+            </div>
+            <div class="right">
+                <div class="box" id="LengthBox">
+                    <div class="from">
                         <h4>&nbsp;From</h4><br>
-                        <Input type="text" class="input">
+                        <input type="text" class="input" id="length-input1">
                         <div class="dropdown">
-                            <ul class="thelist">
-                                <li>Acre</li>
-                                <li>Hectare</li>
-                                <li>square Feet (F<sup>2</sup>)</li>
-                                <li>square Inch </li>
-                                <li>square Millimeter (mm<sup>2</sup>)</li>
-                                <li>square Centimeter (cm<sup>2</sup>)</li>
-                                <li>sqare Meter (m<sup>2</sup>)</li>
-                                <li>square Kilometer (km<sup>2</sup>)</li>
-                                <li>square Mile</li>
-                                <li>square Yard</li>
+                            <ul class="thelist" id="length-unit1">
+                                <li>Feet</li>
+                                <li>Inch</li>
+                                <li>Millimeter (mm)</li>
+                                <li>Centimeter (cm)</li>
+                                <li>Meter (m)</li>
+                                <li>Kilometer (km)</li>
+                                <li>Mile</li>
+                                <li>Yard</li>
                             </ul>
                         </div>
                     </div>
                     <div class="to">
                         <h4>&nbsp;&nbsp;&nbsp;&nbsp;To </h4><br>
-                        <Input type="text" class="input">
+                        <input type="text" class="input" id="length-input2" readonly>
                         <div class="dropdown">
-                            <ul class="thelist">
-                                <li>Acre</li>
-                                <li>Hectare</li>
-                                <li>square Feet (F<sup>2</sup>)</li>
-                                <li>square Inch </li>
-                                <li>square Millimeter (mm<sup>2</sup>)</li>
-                                <li>square Centimeter (cm<sup>2</sup>)</li>
-                                <li>sqare Meter (m<sup>2</sup>)</li>
-                                <li>square Kilometer (km<sup>2</sup>)</li>
-                                <li>square Mile</li>
-                                <li>square Yard</li>
+                            <ul class="thelist" id="length-unit2">
+                                <li>Feet</li>
+                                <li>Inch</li>
+                                <li>Millimeter (mm)</li>
+                                <li>Centimeter (cm)</li>
+                                <li>Meter (m)</li>
+                                <li>Kilometer (km)</li>
+                                <li>Mile</li>
+                                <li>Yard</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-<!--Box - weight-->
-                    <div class="box" id="weightBox"><div class="from">
+                <div class="box" id="AreaBox">
+                    <div class="from">
                         <h4>&nbsp;From</h4><br>
-                        <Input type="text" class="input">
+                        <input type="text" class="input" id="area-input1">
                         <div class="dropdown">
-                            <ul class="thelist">
-                                <li>KiloGram (Kg)</li>
+                            <ul class="thelist" id="area-unit1">
+                                <li>Acre</li>
+                                <li>Hectare</li>
+                                <li>Square Feet (ft²)</li>
+                                <li>Square Inch</li>
+                                <li>Square Millimeter (mm²)</li>
+                                <li>Square Centimeter (cm²)</li>
+                                <li>Square Meter (m²)</li>
+                                <li>Square Kilometer (km²)</li>
+                                <li>Square Mile</li>
+                                <li>Square Yard</li>
+                        </div>
+                    </div>
+                    <div class="to">
+                        <h4>&nbsp;&nbsp;&nbsp;&nbsp;To </h4><br>
+                        <input type="text" class="input" id="area-input2" readonly>
+                        <div class="dropdown">
+                            <ul class="thelist" id="area-unit2">
+                                <li>Acre</li>
+                                <li>Hectare</li>
+                                <li>Square Feet (ft²)</li> 
+                                <li>Square Inch</li>
+                                <li>Square Millimeter (mm²)</li>
+                                <li>Square Centimeter (cm²)</li>
+                                <li>Square Meter (m²)</li>
+                                <li>Square Kilometer (km²)</li>
+                                <li>Square Mile</li>
+                                <li>Square Yard</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="box" id="weightBox">
+                    <div class="from">
+                        <h4>&nbsp;From</h4><br>
+                        <input type="text" class="input" id="weight-input1">
+                        <div class="dropdown">
+                            <ul class="thelist" id="weight-unit1">
+                                <li>Kilogram (Kg)</li>
                                 <li>Gram</li>
                                 <li>Milligram (mg)</li>
                                 <li>Pound</li>
                                 <li>Ounce</li>
-                                <li>Metrik Ton</li>
+                                <li>Metric Ton</li>
                                 <li>Long Ton</li>
                                 <li>Short Ton</li>
                                 <li>Carat</li>
-                                <li>Ounce</li>
                                 <li>Atomic mass unit</li>
                             </ul>
                         </div>
                     </div>
                     <div class="to">
                         <h4>&nbsp;&nbsp;&nbsp;&nbsp;To </h4><br>
-                        <Input type="text" class="input">
+                        <input type="text" class="input" id="weight-input2" readonly>
                         <div class="dropdown">
-                            <ul class="thelist">
-                                <li>KiloGram (Kg)</li>
+                            <ul class="thelist" id="weight-unit2">
+                                <li>Kilogram (Kg)</li>
                                 <li>Gram</li>
                                 <li>Milligram (mg)</li>
                                 <li>Pound</li>
                                 <li>Ounce</li>
-                                <li>Metrik Ton</li>
+                                <li>Metric Ton</li>
                                 <li>Long Ton</li>
                                 <li>Short Ton</li>
                                 <li>Carat</li>
-                                <li>Ounce</li>
                                 <li>Atomic mass unit</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-<!--Box Volume-->
-                    <div class="box" id="VolumeBox"><div class="from">
+                <div class="box" id="VolumeBox">
+                    <div class="from">
                         <h4>&nbsp;From</h4><br>
-                        <Input type="text" class="input">
+                        <input type="text" class="input" id="volume-input1">
                         <div class="dropdown">
-                            <ul class="thelist">
+                            <ul class="thelist" id="volume-unit1">
                                 <li>Liter</li>
-                                <li>MilliLiter (ml)</li>
+                                <li>Milliliter (ml)</li>
                                 <li>US Gallon</li>
-                                <li>cubic Millimeter (mm<sup>3</sup>)</li>
-                                <li>cubic Centimeter (cm<sup>3</sup>)</li>
-                                <li>cubic Meter (m<sup>3</sup>)</li>
-                                <li>cubic Kilometer (km<sup>3</sup>)</li> 
-                                <li>cubic Foot</li>
-                                <li>cubic Inch</li>
-                                <li>cubic Mile</li>
-                                <li>cubic Yard</li>
+                                <li>Cubic Millimeter (mm³)</li>
+                                <li>Cubic Centimeter (cm³)</li>
+                                <li>Cubic Meter (m³)</li>
+                                <li>Cubic Kilometer (km³)</li>
+                                <li>Cubic Foot</li>
+                                <li>Cubic Inch</li>
+                                <li>Cubic Mile</li>
+                                <li>Cubic Yard</li>
                             </ul>
                         </div>
                     </div>
                     <div class="to">
                         <h4>&nbsp;&nbsp;&nbsp;&nbsp;To </h4><br>
-                        <Input type="text" class="input">
+                        <input type="text" class="input" id="volume-input2" readonly>
                         <div class="dropdown">
-                            <ul class="thelist">
+                            <ul class="thelist" id="volume-unit2">
                                 <li>Liter</li>
-                                <li>MilliLiter (ml)</li>
+                                <li>Milliliter (ml)</li>
                                 <li>US Gallon</li>
-                                <li>cubic Millimeter (mm<sup>3</sup>)</li>
-                                <li>cubic Centimeter (cm<sup>3</sup>)</li>
-                                <li>cubic Meter (m<sup>3</sup>)</li>
-                                <li>cubic Kilometer (km<sup>3</sup>)</li> 
-                                <li>cubic Foot</li>
-                                <li>cubic Inch</li>
-                                <li>cubic Mile</li>
-                                <li>cubic Yard</li>
+                                <li>Cubic Millimeter (mm³)</li>
+                                <li>Cubic Centimeter (cm³)</li>
+                                <li>Cubic Meter (m³)</li>
+                                <li>Cubic Kilometer (km³)</li>
+                                <li>Cubic Foot</li>
+                                <li>Cubic Inch</li>
+                                <li>Cubic Mile</li>
+                                <li>Cubic Yard</li>
                             </ul>
                         </div>
                     </div>
-                </div>
-<!--Box Temprature-->
-                    <div class="box" id="TempBox"><div class="from">
+                </div>                
+                <div class="box" id="TempBox">
+                    <div class="from">
                         <h4>&nbsp;From</h4><br>
-                        <Input type="text" class="input">
+                        <input type="text" class="input" id="temp-input1">
                         <div class="dropdown">
-                            <ul class="thelist">
-                                <li>Celsius</li>
-                                <li>Kelvin</li>
-                                <li>Fahrenheit</li>
-                                <br><br><br><br><br>
+                            <ul class="thelist" id="temp-unit1">
+                                <li>Celsius (°C)</li>
+                                <li>Kelvin (K)</li>
+                                <li>Fahrenheit (°F)</li>
                             </ul>
                         </div>
                     </div>
                     <div class="to">
                         <h4>&nbsp;&nbsp;&nbsp;&nbsp;To </h4><br>
-                        <Input type="text" class="input">
+                        <input type="text" class="input" id="temp-input2" readonly>
                         <div class="dropdown">
-                            <ul class="thelist">
-                                <li>Celsius</li>
-                                <li>Kelvin</li>
-                                <li>Fahrenheit</li>
-                                <br><br><br><br><br>
+                            <ul class="thelist" id="temp-unit2">
+                                <li>Celsius (°C)</li>
+                                <li>Kelvin (K)</li>
+                                <li>Fahrenheit (°F)</li>
                             </ul>
                         </div>
-                    </div></div>
+                    </div>
                 </div>
-            <br><br>
+            </div>
+            <br ><br>
         </div>
-        <script src="script.js"></script>  
-    </body>
+    </div>
+    <br><br>
+    <footer>
+        <p>&copy; 2024 Bhavik Vavadiya | Contact Us: <a href="mailto:bhavikprajapati28195@gmail.com">bhavikprajapati28195@gmail.com</a></p>
+    </footer>    
+    <script src="script.js"></script>
+</body>
 </html>

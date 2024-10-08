@@ -1,111 +1,142 @@
-
-*{
-    background-color:#eedfc2;
+* {
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease;
 }
 
-h1{
-    background-color: #40e08b;
-    text-align:center;
-    border-radius:25px;
-    margin:50px 200px;
+h1 {
+    background: linear-gradient(90deg, #007bff, #17a2b8);
+    text-align: center;
+    border-radius: 50px 50px 0 0;
+    margin: 50px 200px;
     padding: 15px;
     font-size: 40px;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.unitc{
-      background-color: #c5dc89;
-      border-radius: 70px;
+
+h1:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
 }
-.button{   
+
+.unitc {
+    background-color: #e9ecef;
+    border-radius: 70px;
+}
+
+.button {
     text-align: center;
     cursor: pointer;
-    border-radius:10%;
-}
-h2{
-    background-color: #20c361cb;
-    font-size: 30px;
-    margin-left:330px;
-    width:450px;
-    border-radius:8px;
-    text-align: center;
-}
-.unit{
-  display:flex;
-    margin:0 90px ;
-    background-color: #c5dc89;
-    gap: 70px;
-    height:240px;
+    border-radius: 10%;
+    transition: background-color 0.3s ease;
 }
 
-.left{
-    display:flex;
-    flex-direction: column;
-    flex:1;
-    border:solid 3px black;
-    border-radius: 15px;
-    height:220px;
+h2 {
+    background: linear-gradient(90deg, #28a745, #1e7e34);
+    font-size: 30px;
+    margin-left: 330px;
+    width: 450px;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}h2:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
-.right{
-    display:flex;
+
+.unit {
+    display: flex;
+    margin: 0 90px;
+    background-color: #e9ecef;
+    gap: 70px;
+    height: 240px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: solid 3px #343a40;
+    border-radius: 15px;
+    height: 220px;
+}
+
+.right {
+    display: flex;
     flex-direction: column;
     gap: 10px;
-    flex:2;
-    height:230px;
+    flex: 2;
 }
 
-h3{
-    background-color: #0abc5dcb;
-    margin:5px 10px;
-    border-radius:5px;
+h3 {
+    background-color: #17a2b8;
+    margin: 5px 10px;
+    border-radius: 5px;
     padding: 5px;
-    border:1px solid black;
-} h3:hover {
-        background-color: #32a852; 
-        color: white;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
-        transform: scale(0.98);
-        transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3;
-    }
+    border: 1px solid #343a40;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
 
-.box{ 
-    height:250px;
-    border:solid black 2px;
-    border-radius:15px;
-    background-color: rgb(26, 187, 157);
-    display:flex;
+h3:hover {
+    background-color: #138496;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+}
+
+.box {
+    height: 250px;
+    border: solid 2px #343a40;
+    border-radius: 15px;
+    background-color: #17a2b8;
+    display: flex;
     justify-content: center;
     align-items: flex-start;
     position: relative;
-    display:none;
-}    
-.from ,.to{
-    flex:1;
-    display:flex;
+    display: none;
+    animation: bounceIn 0.5s ease-in-out;
+}
+
+.from,
+.to {
+    flex: 1;
+    display: flex;
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-    background-color: #1abb9d;
+    background-color: #17a2b8;
     border-radius: 15px;
-    height:220px;
-}
-h4{
-    position: absolute;
-    top: -30px;
-    border:solid black ;
-    border-radius: 5px;
-    width:50px;
+    height: 220px;
 }
 
-.input{
+h4 {
+    position: absolute;
+    top: -30px;
+    border: solid #343a40;
+    border-radius: 5px;
+    width: 50px;
+    color: black;
+}
+
+.input {
     width: 250px;
     height: 45px;
-    border:double black;
+    border: double #343a40;
     border-radius: 5px;
-} input:focus{
-    border-color: #40e08b; 
-    box-shadow: 0px 0px 5px rgba(64, 224, 139, 0.5); 
-    transition: box-shadow 0.3s ease;
-    outline: none; 
+    transition: border-color 0.3s;
 }
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
 .dropdown {
     background-color: white;
     border: 1px solid #ccc;
@@ -113,7 +144,7 @@ h4{
     padding: 7px 2px 7px 7px;
     width: 300px;
     height: 220px;
-    overflow-y:scroll;
+    overflow-y: scroll;
 }
 
 .thelist {
@@ -127,20 +158,69 @@ h4{
     font-size: 14px;
     padding: 4px;
     border-bottom: 1px solid #ddd;
+    transition: background-color 0.2s ease;
 }
 
 .thelist li:hover {
-    background-color: #40e08b;
-    color: black;
-    transition: background-color 0.2s ease-in-out;
+    background-color: #007bff;
+    color: white;
 }
 
 .active {
     display: flex !important;
 }
-.pressed{
-    background-color: #16ab8f;
+
+.pressed {
+    background-color: #138496;
     transform: scale(0.98);
-    box-shadow:inset 2px 2px 5px rgba(0, 0, 0, 0.3); 
-    transition: transform 0.1s, box-shadow 0.1s;    
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.pressedList {
+    background-color: #28a745;
+    color: white;
+    transform: scale(0.98);
+    box-shadow: inset 2px 2px 1px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+footer {
+    background-color: #ffffff;
+    color: #555;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    border-top: 2px solid #e0e0e0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
