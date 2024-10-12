@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const mobileNote = document.getElementById("mobile-note");
+
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+        mobileNote.style.display = "block";
+    }
+});
+
 var Lengthbtn = document.getElementById("Lengthbtn");
 var Areabtn = document.getElementById("Areabtn");
 var weightbtn = document.getElementById("weightbtn");
@@ -78,15 +86,15 @@ function clearPressedList(unitList) {
 function setDefaultLengthUnits() {
     let unitList1Length = document.getElementById('length-unit1');
     let unitList2Length = document.getElementById('length-unit2');
-    unitList1Length.children[0].classList.add('pressedList'); // e.g., 'Meter (m)'
-    unitList2Length.children[1].classList.add('pressedList'); // e.g., 'Feet'
+    unitList1Length.children[0].classList.add('pressedList'); // e.g., 'Feet'
+    unitList2Length.children[1].classList.add('pressedList'); // e.g., 'Inch'
 }
 
 function setDefaultAreaUnits() {
     let unitList1Area = document.getElementById('area-unit1');
     let unitList2Area = document.getElementById('area-unit2');
-    unitList1Area.children[0].classList.add('pressedList'); // e.g., 'Square Meter (m²)'
-    unitList2Area.children[1].classList.add('pressedList'); // e.g., 'Square Feet (ft²)'
+    unitList1Area.children[0].classList.add('pressedList'); // e.g., 'Acre'
+    unitList2Area.children[1].classList.add('pressedList'); // e.g., 'Hectare'
 }
 
 function setDefaultWeightUnits() {
@@ -144,14 +152,27 @@ var conversionFactorWeight = {
     'Carat': 0.0002,
     'Atomic mass unit': 1.66053906660e-27
 };
+var conversionFactorVolume = {
+    'Liter': 1,
+    'Milliliter (ml)': 0.001,
+    'US Gallon': 3.78541,
+    'Cubic Millimeter (mm³)': 0.000001,
+    'Cubic Centimeter (cm³)': 0.001,
+    'Cubic Meter (m³)': 1000,
+    'Cubic Kilometer (km³)': 1000000000,
+    'Cubic Foot': 28.3168466,
+    'Cubic Inch': 0.016387064,
+    'Cubic Mile': 4168181825.44,
+    'Cubic Yard': 764.554857984
+};
 
 var input1Length = document.getElementById('length-input1');
 var input2Length = document.getElementById('length-input2');
 var unitList1Length = document.getElementById('length-unit1');
 var unitList2Length= document.getElementById('length-unit2');
 
-let unit1Length = 'Meter (m)';
-let unit2Length = 'Feet';
+let unit1Length = 'Feet';
+let unit2Length = 'Inch';
 
 unitList1Length.addEventListener('click', function(e) {
     unit1Length = e.target.innerText;
@@ -193,8 +214,8 @@ var input2Area = document.getElementById('area-input2');
 var unitList1Area = document.getElementById('area-unit1');
 var unitList2Area = document.getElementById('area-unit2');
 
-let unit1Area = 'Square Feet (ft²)';
-let unit2Area = 'Square Meter (m²)';
+let unit1Area = 'Acre';
+let unit2Area = 'Hectare';
 
 unitList1Area.addEventListener('click', function(e) {
     unit1Area = e.target.innerText.trim();
@@ -272,19 +293,7 @@ function calculateWeight() {
 
 //For The Volume Sections
 
-var conversionFactorVolume = {
-    'Liter': 1,
-    'Milliliter (ml)': 0.001,
-    'US Gallon': 3.78541,
-    'Cubic Millimeter (mm³)': 0.000001,
-    'Cubic Centimeter (cm³)': 0.001,
-    'Cubic Meter (m³)': 1000,
-    'Cubic Kilometer (km³)': 1000000000,
-    'Cubic Foot': 28.3168466,
-    'Cubic Inch': 0.016387064,
-    'Cubic Mile': 4168181825.44,
-    'Cubic Yard': 764.554857984
-};
+
 
 var input1Volume = document.getElementById('volume-input1');
 var input2Volume = document.getElementById('volume-input2');
@@ -332,7 +341,7 @@ var unitList1Temp = document.getElementById('temp-unit1');
 var unitList2Temp = document.getElementById('temp-unit2');
 
 let unit1Temp = 'Celsius (°C)';
-let unit2Temp = 'Fahrenheit (°F)';
+let unit2Temp = 'Kelvin (K)';
 
 unitList1Temp.addEventListener('click', function(e) {
     unit1Temp = e.target.innerText;
@@ -386,3 +395,4 @@ function calculateTemp() {
     }
     input2Temp.value = result.toFixed(4);
 }
+
